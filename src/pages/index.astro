@@ -2,16 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import MenuItem from '../components/MenuItem.astro';
+import SideBar from '../components/SideBar.astro';
 ---
 
 <Layout title="Welcome to Astro.">
     <main>
-        <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+        <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
         <p class="instructions">
             To get started, open the directory <code>src/pages</code> in your project.<br />
             <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-        </p>
-        <ul role="list" class="link-card-grid">
+        </p> -->
+        <SideBar menuList={['About', 'Test']} />
+        <!-- <ul role="list" class="link-card-grid">
             <Card
                 href="https://docs.astro.build/"
                 title="Documentation"
@@ -40,7 +42,7 @@ import MenuItem from '../components/MenuItem.astro';
                 href="/"
                 text="Space"
             />
-        </ul>
+        </ul> -->
     </main>
 </Layout>
 

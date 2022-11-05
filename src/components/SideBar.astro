@@ -1,0 +1,29 @@
+---
+import MenuItem from './MenuItem.astro';
+
+export interface Props {
+    menuList: string[];
+}
+
+const { menuList } = Astro.props;
+---
+<div class="side-bar">
+    <img src="/favicon.svg" />
+    <ul role="list" class="menu">
+        {menuList.map(item => (<MenuItem href={"/"+item} text={item} />))}
+    </ul>
+</div>
+<style>
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: 15px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+</style>
