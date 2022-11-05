@@ -1,0 +1,35 @@
+---
+export interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props;
+---
+
+<li class="menu-item">
+  <a href={href}>
+    <h3>{text}</h3>
+  </a>
+</li>
+<style>
+  .menu-item {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    background-color: lightslategray;
+    border-radius: 5px 20px;
+	}
+
+  .menu-item > a {
+    width: 100%;
+    text-decoration: none;
+		color: #111;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+  }
+</style>

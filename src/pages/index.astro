@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import MenuItem from '../components/MenuItem.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -30,6 +31,14 @@ import Card from '../components/Card.astro';
                 href="https://astro.build/chat/"
                 title="Community"
                 body="Come say hi to our amazing Discord community. ❤️"
+            />
+            <MenuItem
+                href="/"
+                text="About Me"
+            />
+            <MenuItem
+                href="/"
+                text="Space"
             />
         </ul>
     </main>
