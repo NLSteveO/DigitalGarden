@@ -15,15 +15,23 @@ const { menuList } = Astro.props;
 </div>
 <style>
     .side-bar {
-        display: flex;
+        --offset: var(--space);
+        align-self: start;
+        flex-basis: 200px;
         flex-direction: column;
-        width: 30%;
         padding: 15px;
+        position: sticky;
+        top: var(--offset);
+        max-height: calc(100vh - var(--offset) * 2);
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .side-bar::-webkit-scrollbar {
+        display: none;
     }
     .menu {
-        display: flex;
         flex-direction: column;
         padding: 0;
-        gap: 10px;
     }
 </style>
