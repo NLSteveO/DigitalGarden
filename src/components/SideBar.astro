@@ -8,9 +8,9 @@ export interface Props {
 const { menuList } = Astro.props;
 ---
 <div class="side-bar">
-    <img src="/favicon.svg" />
+    <img src="/DigitalGarden/favicon.svg" />
     <ul role="list" class="menu">
-        {menuList.map(item => (<MenuItem href={"/"+item} text={item} />))}
+        {menuList.map(item => (<MenuItem href={"/DigitalGarden/"+item} text={item} />))}
     </ul>
 </div>
 <style>
